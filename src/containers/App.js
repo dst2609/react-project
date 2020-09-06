@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+//import styled from 'styled-components';
 
 import classes from './App.css';
-import Person from './Person/Person';
+import Person from '../components/Persons/Person/Person';
+//import ErrorBoundary from './ErrorBoundary/ErrorBoundary';
 
-import UserInput from './UserInput/UserInput';
-import UserOutput from './UserOutput/UserOutput';
-import Validation from './Validation/Validation';
-import Char from './Char/Char';
+//import UserInput from './UserInput/UserInput';
+//import UserOutput from './UserOutput/UserOutput';
+//import Validation from './Validation/Validation';
+//import Char from './Char/Char';
 
 
 // const StyledButton = styled.button `
@@ -132,7 +133,8 @@ nameChangedHandler = (event, id) => {
               name={person.name} 
               age={person.age}
               key={person.id}
-              changed={(event) => this.nameChangedHandler(event, person.id)} />
+              
+              changed={(event) => this.nameChangedHandler(event, person.id)} /> 
           })}
         </div> 
       );
@@ -158,8 +160,7 @@ nameChangedHandler = (event, id) => {
         <button 
           className={btnClass}
           // style={style}
-          onClick={this.togglePersonsHandler}>Toggle Persons
-        </button>
+          onClick={this.togglePersonsHandler}>Toggle Persons</button>
         {persons}
 
 
